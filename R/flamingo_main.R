@@ -35,7 +35,8 @@ flamingo_main <- function(hic_data,
                           max_iter=500)
 {
   #### check Args
-  b = Sys.time()
+  b = format(Sys.time(), "%Y%m%d_%H%M%S")
+  # The name should work for all systems
   bin_size = domain_res/frag_res
   if(bin_size != round(bin_size)){
     stop('The domain resolution is not an integer multiple of the fragment resolution!')
